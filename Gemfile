@@ -67,3 +67,5 @@ group :test do
 end
 
 gem "responders"
+
+gem 'react-rails', "~> 2.7.1"
