@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.task do
   json.extract! @task,
     :id,
@@ -9,4 +11,10 @@ json.task do
       :id,
       :name
   end
+
+  json.task_owner do
+    json.extract! @task.task_owner,
+      :name
+  end
+
 end
