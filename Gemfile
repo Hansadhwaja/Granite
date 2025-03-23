@@ -76,3 +76,5 @@ gem "responders"
 gem "react-rails", "~> 2.7.1"
 
 gem "pry-byebug"
+
+gem "simplecov", require: false, group: :test
