@@ -73,21 +73,21 @@ const NavBar = () => {
               Add new task
             </Link>
             <div className="relative" ref={menuRef}>
-              <Link
+              <button
                 className="flex items-center gap-x-1 rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-800 hover:bg-gray-300 focus:shadow"
                 onClick={toggleMenu}
               >
                 <span className="block">{userName}</span>
                 <i className="ri-arrow-down-s-line" />
-              </Link>
+              </button>
               {isMenuVisible && (
                 <div className="absolute right-0 z-20 mt-2 w-48 rounded-md border border-gray-300 bg-white py-1 shadow-xl">
-                  <Link
+                  <button
                     className="block cursor-pointer px-3 py-1.5 text-sm text-gray-800 hover:bg-gray-100"
                     onClick={handleLogout}
                   >
                     Log out
-                  </Link>
+                  </button>
                 </div>
               )}
             </div>
