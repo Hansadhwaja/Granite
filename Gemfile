@@ -88,3 +88,9 @@ gem "pundit"
 gem "sidekiq", "~> 6.5.12"
 
 gem "redis", "~> 4.8", ">= 4.8.1"
+
+# For periodic sidekiq jobs
+gem "sidekiq-cron"
+
+# For opening mails in development env
+gem "letter_opener", group: :development
