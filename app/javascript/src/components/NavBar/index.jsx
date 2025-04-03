@@ -88,6 +88,12 @@ const NavBar = () => {
                   >
                     Preferences
                   </Link>
+                  <Link
+                    className="block px-3 py-1.5 text-sm text-gray-800 hover:bg-gray-100"
+                    to="/tasks/report"
+                  >
+                    Download Report
+                  </Link>
                   <button
                     className="block cursor-pointer px-3 py-1.5 text-sm text-gray-800 hover:bg-gray-100"
                     onClick={handleLogout}

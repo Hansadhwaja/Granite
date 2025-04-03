@@ -11,7 +11,9 @@ gem "rails", "~> 7.1.5", ">= 7.1.5.1"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 1.4"
+gem "sqlite3", ">= 1.4", group: [:development, :test]
+
+gem "pg", group: [:production]
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -94,3 +96,14 @@ gem "sidekiq-cron"
 
 # For opening mails in development env
 gem "letter_opener", group: :development
+
+# PDF generation gem
+gem "wicked_pdf"
+# wicked_pdf uses the following binary
+gem "wkhtmltopdf-binary"
+
+# Required by Active Storage to use the GCS
+gem "google-cloud-storage"
+
+# To load the environment variables
+gem "dotenv-rails"
