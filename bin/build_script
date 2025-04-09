@@ -22,7 +22,7 @@ FileUtils.chdir APP_ROOT do
   system!("bin/rails assets:precompile")
 
   puts "\n== Setting up DB =="
-  system! "bundle exec rake db:setup"
+  system! "bundle binstubs bundler --force"
 
   puts "\n== Migrating DB =="
   system! "bundle exec rake db:migrate"
