@@ -11,6 +11,7 @@ const config = {
   css: { postcss: postCssConfig },
   server: { port, origin: `http://localhost:${port}` },
   build: {
+    outDir: "public/assets",
     manifest: true,
     sourcemap: true,
     cssCodeSplit: false,
