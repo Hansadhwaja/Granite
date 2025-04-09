@@ -122,3 +122,5 @@ dump.rdb
 # Ignore build files
 /app/assets/builds
 coverage
+
+/config/credentials/production.key
