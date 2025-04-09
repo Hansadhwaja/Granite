@@ -31,6 +31,6 @@ module Granite
 
     config.active_job.queue_adapter = :sidekiq
     # Load dotenv file
-    Dotenv::Railtie.load
+    Dotenv::Rails.load
   end
 end

@@ -6,7 +6,7 @@ const postCssConfig = require("./postcss.config");
 
 const port = process.env.DEVSERVER_PORT || 8000;
 
-const baseConfig = {
+const config = {
   assetsInclude: ["**/*.yaml"],
   css: { postcss: postCssConfig },
   server: { port, origin: `http://localhost:${port}` },
@@ -14,10 +14,14 @@ const baseConfig = {
     manifest: true,
     sourcemap: true,
     cssCodeSplit: false,
+    rollupOptions: {
+      input: entryPoints,
+    },
   },
   root: "app/javascript/packs",
   resolve: {
     alias,
+    extensions,
   },
   define,
   plugins: [
@@ -28,12 +32,4 @@ const baseConfig = {
   ],
 };
 
-const viteConfig = mergeDeepRight(baseConfig, {
-  resolve: {
-    alias,
-    extensions,
-  },
-  rollupOptions: { input: entryPoints },
-});
-
-module.exports = viteConfig;
+export default config;
